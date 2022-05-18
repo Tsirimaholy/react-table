@@ -1,8 +1,8 @@
-import { BreadCrumbItem } from './../../Component/BreadCrumb/BreadCrumbItem';
+import { BreadCrumbItem } from "./../../Component/BreadCrumb/BreadCrumbItem";
 import { BreadCrumb } from "./../../Component/BreadCrumb/BreadCrumb";
-import { CardHeader } from './../../CardHeader';
+import { CardHeader } from "../../Component/CardHeader";
 
-export function SideBarContent() {
+export const SideBarContent = () => {
   return (
     <div id="layoutSidenav_content">
       <main>
@@ -530,4 +530,4 @@ export function SideBarContent() {
       </footer>
     </div>
   );
-}
+};
