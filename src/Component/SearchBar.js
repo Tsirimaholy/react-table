@@ -1,11 +1,12 @@
 export function SearchBar(props) {
+  const {label}=props;
     return(
         <div className="input-group">
             <input
               className="form-control"
               type="text"
-              placeholder="Search for..."
-              aria-label="Search for..."
+              placeholder={label}
+              aria-label={label}
               aria-describedby="btnNavbarSearch"
             />
             <button
