@@ -71,9 +71,12 @@ function App() {
                     </a>
                   </nav>
                 </div>
-                <CollapsableNav>
-                  <NavLink label="Static Navigation"></NavLink>
-                  <NavLink label="Light SideNav"></NavLink>
+                <CollapsableNav id="collapseLayouts">
+                  <NavLink
+                    label="Static Navigation"
+                    href="layout-static.html"
+                  ></NavLink>
+                  <NavLink label="Light SideNav" href="layout-sidenav-light.html"></NavLink>
                 </CollapsableNav>
                 <a
                   className="nav-link collapsed"
@@ -114,24 +117,15 @@ function App() {
                         <i className="fas fa-angle-down"></i>
                       </div>
                     </a>
-                    <div
-                      className="collapse"
-                      id="pagesCollapseAuth"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#sidenavAccordionPages"
-                    >
-                      <nav className="sb-sidenav-menu-nested nav">
-                        <a className="nav-link" href="login.html">
-                          Login
-                        </a>
-                        <a className="nav-link" href="register.html">
-                          Register
-                        </a>
-                        <a className="nav-link" href="password.html">
-                          Forgot Password
-                        </a>
-                      </nav>
-                    </div>
+
+                    <CollapsableNav id="pagesCollapseAuth">
+                      <NavLink label="Login" href="login.html"></NavLink>
+                      <NavLink label="Register" href="register.html"></NavLink>
+                      <NavLink
+                        label="Forgot Password"
+                        href="password.html"
+                      ></NavLink>
+                    </CollapsableNav>
                     <a
                       className="nav-link collapsed"
                       href="#!"
@@ -145,24 +139,11 @@ function App() {
                         <i className="fas fa-angle-down"></i>
                       </div>
                     </a>
-                    <div
-                      className="collapse"
-                      id="pagesCollapseError"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#sidenavAccordionPages"
-                    >
-                      <nav className="sb-sidenav-menu-nested nav">
-                        <a className="nav-link" href="401.html">
-                          401 Page
-                        </a>
-                        <a className="nav-link" href="404.html">
-                          404 Page
-                        </a>
-                        <a className="nav-link" href="500.html">
-                          500 Page
-                        </a>
-                      </nav>
-                    </div>
+                    <CollapsableNav id="pagesCollapseError">
+                      <NavLink label="401 Page" href="401.html"></NavLink>
+                      <NavLink label="404 Page" href="404.html"></NavLink>
+                      <NavLink label="500 Page" href="500.html"></NavLink>
+                    </CollapsableNav>
                   </nav>
                 </div>
                 <div className="sb-sidenav-menu-heading">Addons</div>

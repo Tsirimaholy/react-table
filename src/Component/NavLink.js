@@ -1,7 +1,7 @@
 export function NavLink(props) {
-  const {label}=props;
+  const {label,href}=props;
     return (
-    <a className="nav-link" href="layout-static.html">
+    <a className="nav-link" href={href}>
       {label}
     </a>
   );
