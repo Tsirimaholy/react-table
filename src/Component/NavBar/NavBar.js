@@ -6,3 +6,4 @@ export function NavBar(props) {
     </nav>
   );
 }
+
