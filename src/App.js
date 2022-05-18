@@ -8,14 +8,13 @@ import { SideBarLink } from "./Component/SideBarLink";
 import { SideBarFooter } from "./Component/SideBarFooter";
 import { CollapsableNav } from "./Component/CollapsableNav";
 import { NavLink } from "./Component/NavLink";
-import { BreadCrumb } from "./Component/BreadCrumb";
-import { BreadCrumbItem } from "./Component/BreadCrumbItem";
+
 function App() {
   return (
     <body className="sb-nav-fixed">
       <NavBar>
         <NavBrand brandLabel="Start Bootstrap"></NavBrand>
-        <SandwichButton href="#" id="sidebarToggle"></SandwichButton>
+        <SandwichButton href="#!" id="sidebarToggle"></SandwichButton>
         <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
           <SearchBar></SearchBar>
         </form>
@@ -57,15 +56,27 @@ function App() {
                     <i className="fas fa-angle-down"></i>
                   </div>
                 </a>
+                <div
+                  className="collapse"
+                  id="collapseLayouts"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#sidenavAccordion"
+                >
+                  <nav className="sb-sidenav-menu-nested nav">
+                    <a className="nav-link" href="layout-static.html">
+                      Static Navigation
+                    </a>
+                    <a className="nav-link" href="layout-sidenav-light.html">
+                      Light Sidenav
+                    </a>
+                  </nav>
+                </div>
                 <CollapsableNav id="collapseLayouts">
                   <NavLink
                     label="Static Navigation"
                     href="layout-static.html"
                   ></NavLink>
-                  <NavLink
-                    label="Light SideNav"
-                    href="layout-sidenav-light.html"
-                  ></NavLink>
+                  <NavLink label="Light SideNav" href="layout-sidenav-light.html"></NavLink>
                 </CollapsableNav>
                 <a
                   className="nav-link collapsed"
@@ -158,13 +169,12 @@ function App() {
           <main>
             <div className="container-fluid px-4">
               <h1 className="mt-4">Tables</h1>
-              <BreadCrumb>
-                <BreadCrumbItem
-                  label="Dashboard"
-                  href="index.html"
-                ></BreadCrumbItem>
-                <BreadCrumbItem label="Tables"></BreadCrumbItem>
-              </BreadCrumb>
+              <ol className="breadcrumb mb-4">
+                <li className="breadcrumb-item">
+                  <a href="index.html">Dashboard</a>
+                </li>
+                <li className="breadcrumb-item active">Tables</li>
+              </ol>
               <div className="card mb-4">
                 <div className="card-body">
                   DataTables is a third party plugin that is used to generate
